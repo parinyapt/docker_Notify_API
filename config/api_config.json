@@ -1,0 +1,27 @@
+{
+  "service": {
+    "SERVICE_ID": {
+      "name": "SERVICE_NAME",
+      "auth": {
+        "access_key": "SERVICE_ACCESS_KEY"
+      },
+      "line": {
+        "notify_token": "LINE_NOTIFY_TOKEN"
+      },
+      "discord": {
+        "webhook_id": "DISCORD_WEBHOOK_ID",
+        "webhook_token": "DISCORD_WEBHOOK_TOKEN"
+      },
+      "mail": {
+        "smtp_server": "SMTP_SERVER", 
+        "smtp_port": "SMTP_PORT",
+        "smtp_username": "SMTP_USERNAME",
+        "smtp_password": "SMTP_PASSWORD",
+        "sender_alias_name": "SENDER_ALIAS_NAME",
+        "sender_email": "SENDER_EMAIL",
+        "sender_subject": "SENDER_SUBJECT",
+        "receiver_email": ["mail@example.com", "mail2@example.com"]
+      }
+    }
+  }
+}

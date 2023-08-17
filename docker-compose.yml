@@ -1,0 +1,22 @@
+version: "3"
+
+services:
+  notify-api:
+    container_name: ${CONTAINER_NAME}
+    image: ghcr.io/parinyapt/notify-api:${IMAGE_TAG}
+    restart: always
+    expose:
+      - 80
+    networks:
+      default:
+        aliases:
+          - ${HOST_ALIAS_NAME}
+    volumes:
+      - ${JSON_CONFIG_FILE_PATH}:/config-file/api_config.json
+    environment:
+      TZ: Asia/Bangkok
+
+networks:
+  default:
+    name: ${NETWORK_NAME}
+    external: true
